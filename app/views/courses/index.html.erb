@@ -6,27 +6,27 @@
 
 <form action="/insert_course" method="post">
   <div>
-    <label for="title_box">
+    <label for="query_title">
       Title
     </label>
 
-    <input type="text" id="title_b" name="q_title">
+    <input type="text" id="query_title" name="query_title">
   </div>
 
   <div>
-    <label for="term_offered_box">
+    <label for="query_term">
       Term offered
     </label>
 
-    <input type="text" id="term_offered_box" name="query_term">
+    <input type="text" id="query_term" name="query_term">
   </div>
 
   <div>
-    <label for="">
+    <label for="department_id_box">
       Department
     </label>
 
-    <select id="" name="query_department_id">
+    <select id="department_id_box" name="query_department_id">
       <% Department.order({ :name => :asc }).each do |a_department| %>
         <option value="<%= a_department.id %>">
           <%= a_department.name %>
